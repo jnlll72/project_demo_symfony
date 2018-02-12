@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Liste des commentaires</h1>
+
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment.datePublish|date }} -- {{ comment.comment }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
